@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abira | BCA Student & Developer</title>
+<meta name="description" content="Portfolio of Abira, a BCA student building software with C, Java, Python and SQL.">
+<meta property="og:title" content="Abira | BCA Student & Developer">
+<meta property="og:description" content="Projects in databases, operating systems and web development.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E💖%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#home">Abira</a>
+    <nav aria-label="Main">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      <a href="https://www.linkedin.com/" rel="noopener">LinkedIn</a><a href="https://github.com/" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="hero wrap">
+    <span class="badge"><i></i>Available for new projects</span>
+    <div class="avatar" aria-hidden="false">
+      <span>A</span>
+      <img id="avatar" src="/img/profilepic.jpg" alt="Portrait of Abira" width="128" height="128">
+    </div>
+    <h1>I build software from the database up.</h1>
+    <p>Hi, I'm Abira, a BCA student who enjoys understanding how things work underneath: query planners, process schedulers, memory. I write C, Java and Python, and I ship small, well-tested projects.</p>
+    <a class="btn p" href="#contact">Let's connect</a>
+  </section>
+
+  <section id="about" class="wrap">
+    <div class="head"><p class="eyebrow">Get to know me</p><h2>About me</h2></div>
+    <div class="about">
+      <div class="about-pic"><span>A</span></div>
+      <div>
+        <p>I'm a BCA student who likes the parts of computing most people skip: how a database stores a row, how an OS picks the next process, how a bug hides in a boundary case. I'm always learning and building.</p>
+        <p class="loc">Your city, India</p>
+
+        <h3>Education</h3>
+        <div class="edu">
+          <div><b>Your college name</b><span>Your years</span></div>
+          <p>Bachelor of Computer Applications (BCA), currently in 4th semester. Coursework: DBMS, Operating Systems, Software Engineering, Data Structures.</p>
+        </div>
+
+        <h3>Tech stack</h3>
+        <ul class="chips"><li>C</li><li>C++</li><li>Java</li><li>Python</li><li>JavaScript</li><li>SQL</li><li>MySQL</li><li>PostgreSQL</li><li>Linux</li><li>Bash</li><li>Git</li></ul>
+
+        <h3>Tools</h3>
+        <ul class="chips"><li>GitHub</li><li>VS Code</li><li>Postman</li><li>MySQL Workbench</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="wrap">
+    <div class="head"><p class="eyebrow">Explore my creations</p><h2>Projects</h2></div>
+    <p class="note">Sample projects: replace each title, summary, list and link with your own work.</p>
+
+    <article class="proj">
+      <div>
+        <h3>Library Management System</h3>
+        <p>A desktop app that tracks books, members, issues and fines on a normalized database.</p>
+        <ul>
+          <li>Schema in 3NF with foreign keys and constraints.</li>
+          <li>Transactional issue and return flow.</li>
+          <li>Indexed search that stays fast on 50,000 records.</li>
+        </ul>
+        <ul class="chips"><li>Java</li><li>MySQL</li><li>JDBC</li></ul>
+        <div class="links"><a class="btn s" href="https://github.com/" rel="noopener">GitHub</a><a class="btn s" href="https://example.com/" rel="noopener">Live site</a></div>
+      </div>
+      <div class="shot" role="img" aria-label="Screenshot placeholder for Library Management System"><div class="bar"><i></i><i></i><i></i></div><span>Library Management System</span></div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <h3>Mini Shell in C</h3>
+        <p>A Unix-style shell written to learn what happens between pressing Enter and a program running.</p>
+        <ul>
+          <li>Runs programs with fork and exec.</li>
+          <li>Supports pipes, redirection and background jobs.</li>
+          <li>Handles signals such as Ctrl+C cleanly.</li>
+        </ul>
+        <ul class="chips"><li>C</li><li>POSIX</li><li>Linux</li></ul>
+        <div class="links"><a class="btn s" href="https://github.com/" rel="noopener">GitHub</a></div>
+      </div>
+      <div class="shot" role="img" aria-label="Screenshot placeholder for Mini Shell in C"><div class="bar"><i></i><i></i><i></i></div><span>Mini Shell in C</span></div>
+    </article>
+
+    <article class="proj">
+      <div>
+        <h3>Task Tracker Web App</h3>
+        <p>A small web app for group assignments, so everyone can see who owns what.</p>
+        <ul>
+          <li>REST API with Flask and SQLite.</li>
+          <li>Designed from a written SRS and UML diagrams.</li>
+          <li>Covered by unit tests.</li>
+        </ul>
+        <ul class="chips"><li>Python</li><li>Flask</li><li>SQLite</li></ul>
+        <div class="links"><a class="btn s" href="https://github.com/" rel="noopener">GitHub</a><a class="btn s" href="https://example.com/" rel="noopener">Live site</a></div>
+      </div>
+      <div class="shot" role="img" aria-label="Screenshot placeholder for Task Tracker Web App"><div class="bar"><i></i><i></i><i></i></div><span>Task Tracker Web App</span></div>
+    </article>
+  </section>
+
+  <section id="contact" class="wrap">
+    <div class="head"><p class="eyebrow">Get in touch</p><h2>Contact me</h2></div>
+    <div class="contact">
+      <a class="btn p" href="mailto:you@example.com">Mail me</a>
+      <p class="or">Or send a message</p>
+      <form class="cf" id="contact-form" novalidate>
+        <label>Your name<input type="text" name="name" required maxlength="100" autocomplete="name"></label>
+        <label>Your email<input type="email" name="email" required maxlength="200" autocomplete="email"></label>
+        <label>Message<textarea name="message" required minlength="10" maxlength="2000"></textarea></label>
+        <div id="captcha"></div>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn p" type="submit" id="send">Send message</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">© <span id="yr"></span> Abira. All rights reserved.</footer>
+<script src="/app.js" defer></script>
+</body>
+</html>

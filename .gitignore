@@ -1,0 +1,14 @@
+
+# Ignore temporary files
+*.tmp
+*.log
+
+# Ignore dependency folders
+node_modules/
+
+# Ignore environment files
+.env
+server.js
+
+# Ignore VS Code workspace settings
+.vscode/

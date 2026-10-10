@@ -1,0 +1,102 @@
+:root{
+  /* Baby pink theme: soft pastel background with blush accents */
+  --bg:#fef1f6;--surface:#fff8fb;--ink:#4d2a3a;--muted:#8b6273;--line:#f3d3df;
+  --accent:#f4adc8;--accent-ink:#4d2a3a;--ok:#5fb98e;--err:#d9587a;
+  --sparkle:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cpath d='M35 25c1.4 7 5.6 11.2 13 13-7.4 1.8-11.6 6-13 13-1.4-7-5.6-11.2-13-13 7.4-1.8 11.6-6 13-13z' fill='%23f7bfd4' fill-opacity='.45'/%3E%3Cpath d='M105 85c1 5 4 8 9 9-5 1-8 4-9 9-1-5-4-8-9-9 5-1 8-4 9-9z' fill='%23f9d7e5' fill-opacity='.6'/%3E%3C/svg%3E");
+  --bg-grad:
+    var(--sparkle),
+    radial-gradient(1000px 520px at 8% -10%, rgba(255,255,255,.9), rgba(255,255,255,0) 60%),
+    radial-gradient(900px 480px at 108% 0%, #fce8f1, rgba(252,232,241,0) 55%),
+    linear-gradient(180deg, #fff7fb, #fdeaf5 52%, #fce0ee);
+  box-sizing:border-box;
+}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg-grad, var(--bg));background-attachment:fixed;color:var(--ink);font:400 1.0625rem/1.7 "Plus Jakarta Sans",system-ui,sans-serif;padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{line-height:1.15;margin:0;font-weight:800}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:24px;padding-right:24px}
+
+/* Navigation */
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav-in{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px}
+.brand{font-weight:800;font-size:1.2rem;color:var(--ink);text-decoration:none}
+nav{display:flex;gap:6px 22px;flex-wrap:wrap;justify-content:flex-end;font-size:.95rem;font-weight:500}
+nav a{color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+
+/* Buttons and chips */
+.btn{display:inline-block;padding:11px 22px;border-radius:999px;font:600 1rem "Plus Jakarta Sans",sans-serif;text-decoration:none;border:2px solid var(--accent);cursor:pointer}
+.btn.p{background:var(--accent);color:var(--accent-ink)}
+.btn.s{background:none;color:var(--accent);padding:8px 18px;font-size:.92rem}
+.btn:hover{filter:brightness(1.1)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 20px;padding:0}
+.chips li{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 14px;font-size:.88rem;font-weight:500}
+
+/* Hero */
+.hero{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:72px;padding-bottom:96px}
+.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:5px 16px;font-size:.88rem;font-weight:500;margin-bottom:28px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--ok)}
+.avatar,.about-pic{position:relative;border-radius:50%;overflow:hidden;background:var(--surface);border:2px solid var(--line);display:grid;place-items:center;font-weight:800;color:var(--accent)}
+.avatar{width:128px;height:128px;font-size:3rem;margin-bottom:28px}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:-.03em;max-width:18ch}
+.hero p{max-width:56ch;color:var(--muted);margin:22px 0 30px}
+
+/* Sections */
+section{padding-top:72px;padding-bottom:72px;border-top:1px solid var(--line)}
+.hero{border-top:0}
+.head{text-align:center;margin-bottom:44px}
+.eyebrow{margin:0 0 8px;color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase}
+.head h2{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:-.02em}
+.note{text-align:center;color:var(--muted);margin:-24px 0 36px;font-size:.95rem}
+
+/* About */
+.about{display:grid;grid-template-columns:220px 1fr;gap:48px;align-items:start}
+.about-pic{width:220px;height:220px;font-size:5rem}
+.about h3{font-size:1.15rem;margin:26px 0 12px}
+.loc{color:var(--muted);margin-bottom:0}
+.edu div{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.edu span,.edu p{color:var(--muted)}
+.edu p{margin:4px 0 0}
+
+/* Projects */
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;padding:36px 0;border-bottom:1px solid var(--line)}
+.proj:last-child{border-bottom:0}
+.proj:nth-of-type(even) .shot{order:-1}
+.proj h3{font-size:1.5rem;margin-bottom:10px}
+.proj > div > p{color:var(--muted)}
+.proj ul:not(.chips){margin:0 0 18px;padding-left:20px;color:var(--muted)}
+.proj li{margin-bottom:4px}
+.links{display:flex;gap:10px;flex-wrap:wrap}
+.shot{border:1px solid var(--line);background:var(--surface);border-radius:12px;overflow:hidden;aspect-ratio:16/10;display:flex;flex-direction:column}
+.shot .bar{display:flex;gap:6px;padding:10px 12px;border-bottom:1px solid var(--line)}
+.shot .bar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.shot span{flex:1;display:grid;place-items:center;color:var(--muted);font-weight:600;padding:12px;text-align:center}
+
+/* Contact */
+.contact{display:flex;flex-direction:column;align-items:center}
+.or{color:var(--muted);margin:22px 0}
+.cf{display:grid;gap:16px;width:100%;max-width:560px;position:relative}
+.cf label{display:grid;gap:6px;font-weight:600}
+.cf input,.cf textarea{font:inherit;font-weight:400;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+.cf textarea{min-height:140px;resize:vertical}
+.cf button{justify-self:start}
+.cf button:disabled{opacity:.6;cursor:wait}
+.hp{position:absolute;left:-9999px}
+.status{margin:0;min-height:1.5em;font-weight:600}
+.status.ok{color:var(--ok)}.status.err{color:var(--err)}
+
+footer{padding-top:32px;padding-bottom:48px;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+
+@media (max-width:760px){
+  .about,.proj{grid-template-columns:1fr}
+  .about-pic{margin:0 auto}
+  .proj:nth-of-type(even) .shot{order:0}
+  .nav-in{flex-direction:column;align-items:flex-start;gap:8px}
+  nav{justify-content:flex-start}
+  html{scroll-padding-top:120px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
